@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sprouts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sprouts Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="juH-cK-Ofs">
+                                <rect key="frame" x="68" y="20" width="205" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose mode:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IXz-tO-Cpy">
+                                <rect key="frame" x="14" y="86" width="138" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="HB8-NM-7Z8">
+                                <rect key="frame" x="166" y="120" width="129" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Human-Machine"/>
+                                <connections>
+                                    <action selector="HMButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="My4-v6-xTH"/>
+                                    <segue destination="ryM-Bc-dmY" kind="modal" id="JmZ-Tb-IWR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ush-cA-Lku">
+                                <rect key="frame" x="166" y="86" width="140" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Machine-Machine"/>
+                                <connections>
+                                    <action selector="MMButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4dl-OC-TVV"/>
+                                    <segue destination="ryM-Bc-dmY" kind="modal" id="rWh-jx-uT4"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sproutsgametree" id="7dL-Xk-bbJ">
+                                <rect key="frame" x="30" y="158" width="281" height="410"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="HumanMachineButton" destination="HB8-NM-7Z8" id="0bv-ey-sS9"/>
+                        <outlet property="MachineMachineButton" destination="ush-cA-Lku" id="gsx-DW-8hV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="335"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="NdM-Ay-LwM">
+            <objects>
+                <viewController id="ryM-Bc-dmY" customClass="GameViewController" customModule="Sprouts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vHt-Nm-Lco">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0A7-TB-K0Y">
+                                <rect key="frame" x="11" y="20" width="234" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AX5-eA-C9P">
+                                <rect key="frame" x="75" y="67" width="170" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sprouts0" id="8Aq-vu-oOa">
+                                <rect key="frame" x="0.0" y="165" width="320" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Hb5-Nd-e4W">
+                                <rect key="frame" x="11" y="335" width="79" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="sprouts1"/>
+                                <connections>
+                                    <action selector="buttonOnePressed:" destination="ryM-Bc-dmY" eventType="touchUpInside" id="sul-Sx-B37"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wAG-KG-IJw">
+                                <rect key="frame" x="228" y="335" width="66" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="sprouts2"/>
+                                <connections>
+                                    <action selector="buttonTwoPressed:" destination="ryM-Bc-dmY" eventType="touchUpInside" id="aVT-KT-VVW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xtC-TC-nGa">
+                                <rect key="frame" x="13" y="442" width="77" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="sprouts20"/>
+                                <connections>
+                                    <action selector="buttonThreePressed:" destination="ryM-Bc-dmY" eventType="touchUpInside" id="qYn-FL-bm0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="PPv-Lf-J5P">
+                                <rect key="frame" x="228" y="442" width="66" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="sprouts18"/>
+                                <connections>
+                                    <action selector="buttonFourPressed:" destination="ryM-Bc-dmY" eventType="touchUpInside" id="RwK-li-pkJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xXa-OA-agl">
+                                <rect key="frame" x="75" y="109" width="170" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="cpuTurnButtonPressed:" destination="ryM-Bc-dmY" eventType="touchUpInside" id="RYO-M5-k68"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rwB-GT-xUk"/>
+                    <connections>
+                        <outlet property="buttonFour" destination="PPv-Lf-J5P" id="ojl-gu-wkY"/>
+                        <outlet property="buttonOne" destination="Hb5-Nd-e4W" id="IMB-5W-f7Z"/>
+                        <outlet property="buttonThree" destination="xtC-TC-nGa" id="p9t-Yg-h9u"/>
+                        <outlet property="buttonTwo" destination="wAG-KG-IJw" id="RWJ-Rl-uUQ"/>
+                        <outlet property="cpuTurnButton" destination="xXa-OA-agl" id="Gzj-Lp-1BB"/>
+                        <outlet property="currentStateImage" destination="8Aq-vu-oOa" id="cbb-wz-egr"/>
+                        <outlet property="gameModeLabel" destination="0A7-TB-K0Y" id="IAg-go-Pa6"/>
+                        <outlet property="turnLabel" destination="AX5-eA-C9P" id="DxN-wM-dw9"/>
+                        <segue destination="BYZ-38-t0r" kind="modal" identifier="gameEnd" id="SwD-K7-Xsx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3gJ-b0-jly" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="525" y="335"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sprouts0" width="51" height="89"/>
+        <image name="sprouts1" width="56" height="91"/>
+        <image name="sprouts18" width="49" height="88"/>
+        <image name="sprouts2" width="52" height="90"/>
+        <image name="sprouts20" width="51" height="87"/>
+        <image name="sproutsgametree" width="1087" height="771"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="JmZ-Tb-IWR"/>
+    </inferredMetricsTieBreakers>
+</document>
